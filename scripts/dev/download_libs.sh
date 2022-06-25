@@ -116,8 +116,9 @@ if [ "$ARCH" == "" ]; then
             else
                 ARCH=64gcc6
             fi
-        elif [ "$ARCH" == "armv7l" ]; then
+        elif [ "$ARCH" == "aarch64" ]; then
             # Check for Raspberry Pi
+            ARCH=armv7l
             if [ -f /opt/vc/include/bcm_host.h ]; then
                 ARCH=armv6l
             fi
